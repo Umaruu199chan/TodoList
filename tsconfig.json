@@ -9,7 +9,8 @@
     "skipLibCheck": true,      // Speeds up compilation
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",        // Output directory (adjust as needed)
-    "rootDir": "./src"         // Source directory
+    "rootDir": "./src",         // Source directory
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["src/**/*"],     // Files to include
   "exclude": ["node_modules"]  // Files to ignore
