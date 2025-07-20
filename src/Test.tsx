@@ -1,12 +1,15 @@
 import { useState } from "react"
+type Todos = {
+    id: number;
+    title: string;
+    details?: string
+}
 
 function Test() {
-    const [todos, setTodos] = useState([
-        {id: 1, Title: "Initial ToDo", Details: "Nyaaaa"}
-    ]);
-    const [title, setTitle] = useState('');
-    const [details, setDetails] = useState('');
-    const [error, setError] = useState('');
+    const [todos, setTodos] = useState<Todos[]>([]);
+    const [title, setTitle] = useState<string>('');
+    const [details, setDetails] = useState<string>('');
+    const [error, setError] = useState<string>('');
 
 
     function addToDo() {
@@ -14,10 +17,10 @@ function Test() {
             setError(" Please Input Something First");
             return;
         }
-        const addToList = {
+        const addToList: Todos = {
             id: Date.now(),
-            Title: title.trim(),
-            Details: details.trim()
+            title: title.trim(),
+            details: details.trim()
         }
 
         setTodos(prevTodo => [...prevTodo, addToList]);
@@ -25,7 +28,7 @@ function Test() {
         setDetails("");
     }
 
-    function removeToDo(id) {
+    function removeToDo(id: number) {
         setTodos(prevTodo => prevTodo.filter(todo => todo.id !== id));
     }
 
