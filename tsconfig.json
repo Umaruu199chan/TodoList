@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "jsx": "react-jsx",        // Enables TSX support
+    "strict": true,            // Recommended for type safety
+    "moduleResolution": "node",
+    "esModuleInterop": true,   // Helps with default imports
+    "skipLibCheck": true,      // Speeds up compilation
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",        // Output directory (adjust as needed)
+    "rootDir": "./src"         // Source directory
+  },
+  "include": ["src/**/*"],     // Files to include
+  "exclude": ["node_modules"]  // Files to ignore
+}
