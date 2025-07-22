@@ -1,4 +1,6 @@
 import { useState } from "react"
+import supabase from './utils/supabase'
+ 
 type Todos = {
     id: number;
     title: string;
